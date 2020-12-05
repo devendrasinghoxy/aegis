@@ -119,7 +119,7 @@ img{
     -ms-box-shadow: 8px 15px 40px rgba(0, 0, 0, 0.15);
     -o-box-shadow: 8px 15px 40px rgba(0, 0, 0, 0.15);
 }
-.site_common_form{
+.site_common_form {
 	display:inline-block;
 	width:100%;
 }
@@ -131,12 +131,14 @@ img{
 .form_heading .heading {
     margin: 0;
     text-transform: capitalize;
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--secondary_color);
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+    color: #111111;
 }
-.form_heading p {
-    margin-bottom: 0px;
+.site_common_form .form_group {
+    margin-bottom: 14px;
+    display: inline-block;
+    width: 100%;
 }
 .site_common_form .form_group .form_label {
     color: var(--black_color);
@@ -150,26 +152,21 @@ img{
 .site_common_form .form_group input, 
 .site_common_form .form_group select, 
 .site_common_form .form_group textarea {
-    height: 40px;
-    padding: 0 10px;
-    font-size: 14px;
+    height: 42px;
+    padding: 0 12px;
+    font-size: 16px;
     width: 100%;
     border: 1px solid #ccc;
-	border-radius: 5px;
+	border-radius: 4px;
 }
 .site_common_form .form_group textarea.form-control, 
 .site_common_form .form_group textarea {
-    height: 82px;
+    height: 100px;
     padding-top: 10px;
 	resize:none;
 }
-.site_common_form .form_group {
-    margin-bottom: 14px;
-    display: inline-block;
-    width: 100%;
-}
 .site_common_form .submit_buttons {
-    margin-top: 10px;
+	border-radius:4px;
 }
 .site_common_form .form_text {
     display: inline-block;
@@ -436,13 +433,7 @@ button:focus, input:focus, select:focus, textarea:focus{
 	outline:none !important;
 }
 .bg_gray {
-    background-color: var(--gray_bg);
-}
-.bg_white {
-    background-color: var(--white_color);
-}
-.white_box {
-    background-color: var(--white_color);
+    background-color: #e7e9ed;
 }
 .owl-carousel .owl-item img {
     max-width: 100%;
@@ -639,7 +630,7 @@ button:focus, input:focus, select:focus, textarea:focus{
     display: block;
 }
 .header_logo > a img {
-    max-height: 30px;
+    max-height: 40px;
 }
 .nav_toggle {
     float: right;
@@ -883,6 +874,13 @@ button:focus, input:focus, select:focus, textarea:focus{
     margin-bottom: 20px;
 }
 /*==== Section Heading css End  ====*/
+/*==== video section css start  ====*/
+.site_video_dv iframe{
+	width:100%;
+	height:100vh;
+	border:none;
+}
+/*==== video section css End  ====*/
 /*==== why choose section css End  ====*/
 .why_choose_section {
     background-size: 1000px;
@@ -1038,7 +1036,6 @@ button:focus, input:focus, select:focus, textarea:focus{
     background: #f7f7f7;
 }
 .product_filter_tab ul li.active{
-    padding: 5px 10px;
     background: var(--green_color);
     color: #ffffff;
 }
@@ -1185,10 +1182,6 @@ button:focus, input:focus, select:focus, textarea:focus{
     height: 100%;
     border-radius: 8px;
 }
-.a_prof_col {
-    padding-right: 30px;
-    border-right: 1px solid var(--dark_gray);
-}
 .about_profile{
 	text-align:center;
 }
@@ -1228,9 +1221,6 @@ button:focus, input:focus, select:focus, textarea:focus{
     line-height: 1.5rem;
     /* color: #111; */
 }
-.a_text_col{
-	padding-left:30px;
-}
 .about_h_content .titles {
     margin-bottom: .5rem;
     font-size: 2.25rem;
@@ -1242,17 +1232,202 @@ button:focus, input:focus, select:focus, textarea:focus{
     font-size: 1.25rem;
     font-weight: 300;
 }
-.about_h_content .learn_lnk {
+.learn_lnk {
     color: var(--dark_gray);
     text-transform: capitalize;
 }
-.about_h_content .learn_lnk i {
+.learn_lnk i {
     padding-left: 10px;
 }
 .about_h_content .learn_lnk:hover {
     color: var(--blue_color);
 }
 /*==== about home section End ====*/
+/*==== Blog section start ====*/
+.blog_section_wrap{
+	background-color:var(--blue_color);
+	background-image: url(../images/blog/blog_bg.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+	background-attachment:fixed;
+	position:relative;
+	z-index:1;
+}
+.blog_section_wrap .overlay {
+    z-index: -1;
+    opacity: 0.3;
+}
+.blog_white_box {
+    display: inline-block;
+    width: 100%;
+    padding:40px;
+    background: #fff;
+    border-radius: 8px;
+}
+.blog_home_row {
+    align-items: center;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.blog_home_row svg{
+	z-index:-1;
+	max-width:100%;
+	height:auto;
+}
+.blog_home_row .blog_img {
+    float: left;
+    width: 30%;
+}
+.blog_home_row .blog_img img {
+    border-radius:8px 0 0 8px;
+}
+.blog_home_row .content_box {
+    float: left;
+    width: 70%;
+}
+.blog_home_row .blog_contents {
+    padding: 15px 20px;
+}
+.blog_home_row .content_box .category {
+	font-size: 16px;
+	line-height: 20px;
+	color:#ffffff;
+	text-transform:uppercase;
+}
+.blog_home_row .content_box h3 {
+	font-size: 1.875rem;
+    line-height: 2.25rem;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+	color:#ffffff;
+}
+.blog_home_row .content_box p {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 300;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.blog_home_row .learn_lnk{
+	color:#ffffff;
+}
+.blog_home_row .learn_lnk:hover{
+	color:#111111;
+}
+.blog_home_row:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+/*==== Blog section End ====*/
+/*==== Testimonial css start ====*/
+.testimonial_body {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 20px 20px 35px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.testimonial_body svg{
+	z-index:-1;
+	max-width:100%;
+	height:auto;
+}
+.testimonial_body .para {
+    padding: 0 20px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.testimonial_body .para p {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+	margin:0;
+	font-weight:300;
+	color:#ffffff;
+}
+.testimonial_body .quotes {
+    line-height: 29px;
+    font-size: 3.75rem;
+    color: #ffffff;
+    float: left;
+}
+.testimonial_body .quotes.left {
+    position: absolute;
+    left: 0;
+	top:0;
+}
+.testimonial_body .quotes.right {
+    position: absolute;
+    right: 0;
+    top: 100%;
+}
+.testimonial_body .avatar{
+	padding-bottom:20px;
+}
+.testimonial_body .avatar img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+.testimonial_body h3 {
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	font-weight: 500;
+	color:#ffffff;
+	margin:0;
+}
+.testimonial_body .username {
+	font-size: 1.125rem;
+    line-height: 1.75rem;
+	font-weight:300;
+	color:#ffffff;
+}
+/*==== Testimonial css end ====*/
+/*==== contact css section start ====*/
+.address_row {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.address_row .title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #111;
+}
+.address_row .title .icon {
+    display: inline-block;
+    width: 30px;
+    margin-right: 8px;
+}
+.address_row p {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+.address_row p a {
+    color:var(--dark_gray);
+}
+.contact_form_dv {
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+}
+.contact_form .submit_buttons {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    font-size: 17px;
+}
+/*==== contact css section End ====*/
 /*==== footer section css end ====*/
 .footer_section {
     float: left;

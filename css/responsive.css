@@ -15,6 +15,9 @@
 	.why_choose_section {
 		background-position: center center;
 	}
+	.blog_white_box {
+		padding: 30px;
+	}
 }
 @media(min-width:992px){
 	.caret_down {
@@ -102,7 +105,7 @@
 		z-index: 11;
 		width: 100%;
 		display: none;
-		background: var(--dark_gray);
+		background: var(--black_color);
 		padding: 15px;
 		float: left;
 		width: 100%;
@@ -236,6 +239,35 @@
 		color: var(--secondary_color);
 	}
 	/*== second level submenu css End ==*/
+	/*== blog css start ==*/
+	.blog_home_row .blog_img {
+		float: left;
+		width: 100%;
+		padding: 20px 20px 0;
+	}
+	.blog_home_row .blog_img img {
+		border-radius: 5px;
+		max-height: 150px;
+	}
+	.blog_home_row .content_box {
+		width: 100%;
+	}
+	.blog_home_row .content_box .category {
+		font-size: 14px;
+		line-height: 16px;
+	}
+	.blog_home_row .content_box h3 {
+		font-size: 24px;
+		line-height: 30px;
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+	.blog_home_row .content_box p {
+		font-size: 16px;
+		line-height: 25px;
+		margin-bottom: 8px;
+	}
+	/*== blog css End ==*/
 }
 @media(max-width:991px){
 	/* Breadcrumb css */
@@ -258,15 +290,180 @@
 	.desktop_view{
 		display:none;
 	}
+	.footer_section {
+		text-align: center;
+	}
+	.footer_social {
+		text-align: center;
+	}
+	.address_row p {
+		font-size: 17px;
+		line-height: 26px;
+		margin-top: 5px;
+	}
+	.testimonial_body h3 {
+		font-size: 26px;
+		line-height: 30px;
+	}
+	.testimonial_body .para p {
+		font-size: 18px;
+		line-height: 26px;
+	}
+}
+@media(min-width:768px){
+	.a_prof_col {
+		padding-right: 30px;
+		border-right: 1px solid var(--dark_gray);
+	}
+	.a_text_col{
+		padding-left:30px;
+	}
 }
 @media(max-width:767px){
+	.view_all_btn .view_btn {
+		font-size: 16px;
+		height: 48px;
+		line-height: 48px;
+		padding: 0 30px;
+	}
 	.owl-nav > div {
 		font-size:30px;
 	}
+	.section_heading .heading_dv h3 {
+		font-size: 30px;
+		line-height: 30px;
+		margin-bottom: 15px;
+	}
+	.section_heading .heading_dv p {
+		font-size: 1rem;
+		line-height: 25px;
+		margin-bottom: 15px;
+	}
+	/* solution css */
+	.solution_items .content_box .titles {
+		font-size: 26px;
+		margin-top: 25px;
+		margin-bottom: 10px;
+	}
+	.solution_items .content_box p {
+		line-height: 25px;
+		font-size: 16px;
+		margin-bottom: 0;
+	}
+	/* solution css */
+	/* about home css */
+	.about_h_content .titles {
+		font-size: 30px;
+		line-height: 30px;
+		color: #222;
+	}
+	.about_h_content p {
+		line-height: 25px;
+		font-size: 16px;
+		font-weight: 400;
+	}
+	/* about home css */
+	/* stats css */
+	.stats_content {
+		margin-bottom: 25px;
+	}
+	.stats_content h3 {
+		font-size: 28px;
+	}
+	.stats_content p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.stats_colm h3 {
+		font-size: 28px;
+		line-height: 28px;
+	}
+	.stats_colm p {
+		font-size: 15px;
+	}
+	/* stats css */
+	.product_filter_tab ul li {
+		padding: 4px 7px;
+		font-size: 13px;
+		margin: 0 5px;
+	}
+	/*why choose css*/
+	.why_choose_box {
+		padding: 25px;
+	}
+	.why_choose_box h2 {
+		font-size: 30px;
+		margin-bottom: 14px;
+	}
+	.why_choose_box p {
+		font-size: 16px;
+		line-height: 25px;
+		font-weight: 400;
+	}
+	.why_choose_box ul li {
+		font-size: 16px;
+		line-height: 25px;
+		font-weight: 400;
+	}
+	.why_choose_box .read_more {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	/*why choose css*/
+	/*== blog css ==*/
+	.blog_home_row .blog_img {
+		padding: 15px 15px 0;
+	}
+	.blog_home_row .blog_contents {
+		padding: 15px 15px;
+	}
+	/*== blog css ==*/
+	/*== testimonial css ==*/
+	.testimonial_body {
+		padding: 20px 15px 20px;
+	}
+	.testimonial_body .quotes {
+		line-height: 28px;
+		font-size: 3rem;
+	}
+	.testimonial_body .para {
+		margin-bottom: 20px;
+	}
+	.testimonial_body .avatar {
+		padding-bottom: 15px;
+	}
+	.testimonial_body h3 {
+		font-size: 22px;
+		line-height: 30px;
+	}
+	.testimonial_body .username {
+		font-size: 17px;
+		line-height: 23px;
+	}
+	/*== testimonial css ==*/
+	/*== contact css ==*/
+	.address_row p {
+		font-size: 16px;
+		line-height: 25px;
+	}
+	.contact_form_dv {
+		padding: 20px;
+	}
+	.form_heading .heading {
+		font-size: 30px;
+		line-height: 34px;
+	}
+	/*== contact css ==*/
 }
 
 @media(max-width:480px){
 	.header_logo > a img {
 		max-height: 30px;
+	}
+}
+@media(max-width:460px){
+	.stats_colm {
+		width: 50%;
+		padding: 0 6px;
 	}
 }
