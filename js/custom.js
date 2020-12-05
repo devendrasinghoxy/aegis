@@ -170,4 +170,18 @@
 		$(".f_widget_title").not(this).next().slideUp(100);
 		$(".f_widget_title").not(this).removeClass("active");
 	});
+	//header search bar
+	$(".h_search_icon").on("click",function(e){
+		$(this).next(".search_bar_menu").slideToggle(100);
+		e.stopPropagation();
+	});
+	$(".search_bar_menu").on("click",function(e){
+		e.stopPropagation();
+	});
+	$("body").on("click",function(){
+		$(".search_bar_menu").slideUp(100);
+	});
+	$(".close_search").on("click",function(){
+		$(this).parents(".search_bar_menu").slideUp(100);
+	});
 })(jQuery);

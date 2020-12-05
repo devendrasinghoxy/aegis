@@ -1,13 +1,6 @@
 @media(max-width:1199px){
-	.nav_right > .icons {
-		text-decoration: none;
-		font-size: 18px;
-		font-weight: 400;
-		color: #fff;
-		margin-right: 10px;
-		cursor: pointer;
-		padding: 0px 2px;
-		display: inline-block;
+	.nav_right > .icons + .icons {
+		margin-left: 10px;
 	}
 	.navigation_menu > ul > li {
 		margin-right: 20px;
@@ -128,11 +121,8 @@
 		font-weight: 500;
 		color: #fff;
 	}
-	.nav_right > .icons {
-		margin-right: 4px;
-	}
-	.nav_right > .icons:last-child {
-		margin-right: 5px;
+	.nav_right > .icons + .icons {
+		margin-left: 4px;
 	}
 	/*== submenu css start ==*/
 	.caret_down{
