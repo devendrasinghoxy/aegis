@@ -49,7 +49,6 @@ h1, h2, h3, h4, h5{
 p {
     font-size: 15px;
     line-height: 25px;
-    color: var(--gray_dark_color);
 }
 .clearfix {
     float: left;
@@ -520,7 +519,8 @@ button:focus, input:focus, select:focus, textarea:focus{
 .owl-carousel .owl-nav > button.owl-prev, 
 .owl-carousel .owl-nav > button.owl-next {
     position: absolute;
-    top: 0;
+    top: 50%;
+	margin-top:-15px;
     transition: all ease-in 0.25s;
     -webkit-transition: all ease-in 0.25s;
     -moz-transition: all ease-in 0.25s;
@@ -615,13 +615,17 @@ button:focus, input:focus, select:focus, textarea:focus{
 .main_header {
     float: left;
     width: 100%;
-    background: var(--dark_gray);
-    padding: 15px 0;
-	position:relative;
+    background: rgb(0 0 0 / 67%);
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
 }
 .header_logo {
     text-align: center;
-	display:inline-block;
+    display: inline-block;
+    padding: 15px 0;
 }
 .header_logo > a {
     display: block;
@@ -629,9 +633,13 @@ button:focus, input:focus, select:focus, textarea:focus{
 .header_logo > a img {
     max-height: 40px;
 }
+.nav_cols {
+    position: static;
+}
 .nav_toggle {
     float: right;
-    margin-top: 5px;
+    margin-top: 19px;
+    margin-left: 7px;
     cursor: pointer;
     width: 25px;
     height: 22px;
@@ -703,8 +711,8 @@ button:focus, input:focus, select:focus, textarea:focus{
 .navigation_menu > ul > li {
     float: left;
     position: relative;
-    margin-right: 4rem;
-    padding: 8px 0;
+    margin-right: 2rem;
+    padding: 23px 0;
 }
 .navigation_menu > ul>li >a {
     display: inline-block;
@@ -713,13 +721,15 @@ button:focus, input:focus, select:focus, textarea:focus{
     font-size: 16px;
     font-weight: 400;
     color: #fff;
+    border-bottom: 1px solid transparent;
 }
 .navigation_menu > ul> li > a:hover, .navigation_menu > ul> li > a.active {
-    opacity:0.8;
+    border-bottom-color:#ffffff;
 }
-.nav_right{
-	display:inline-block;
-	position:relative;
+.nav_right {
+    display: inline-block;
+    position: relative;
+    padding: 22px 0;
 }
 .nav_right > .icons {
     text-decoration: none;
@@ -731,7 +741,7 @@ button:focus, input:focus, select:focus, textarea:focus{
     display: inline-block;
 }
 .nav_right > .icons + .icons {
-    margin-left: 4rem;
+    margin-left: 2rem;
 }
 .nav_right > .icons:hover {
   opacity:0.8;
@@ -739,9 +749,9 @@ button:focus, input:focus, select:focus, textarea:focus{
 .search_bar_menu {
     display: none;
     position: absolute;
-    top: 51px;
+    top: 100%;
     right: 0;
-    width: 230px;
+    width: 250px;
     padding: 10px 10px;
     background: #fff;
     border-radius: 4px;
@@ -845,27 +855,99 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 /* == submenu css == */
 /*======= Navigation Header css End ========*/
+/* == menu fix css == */
+.main_header.fixed_menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 11;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.63);
+	-webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.63);
+	-moz-box-shadow: 0 0 12px rgba(0, 0, 0, 0.63);
+	width: 100%;
+}
+/* == menu fix css == */
+/*==== Slider css Start ====*/
+.slide_item{
+	position:relative;
+	z-index:1;
+}
+.slide_item .overlay{
+}
+.slider_caption_wrap {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.slider_caption {
+    width: 600px;
+	display:inline-block;
+}
+.slider_caption h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 14px;
+    text-transform: capitalize;
+    line-height: 55px;
+}
+.slider_caption p {
+    color: #fff;
+    font-size: 18px;
+	margin-bottom:
+}
+.slider_caption .slide_btn {
+    margin-top: 15px;
+}
+.home_slider .owl-nav > button.owl-prev, 
+.home_slider .owl-nav > button.owl-next {
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    width: 45px;
+    height: 45px;
+    line-height: 43px;
+}
+.home_slider .owl-nav > button.owl-prev:hover, 
+.home_slider .owl-nav > button.owl-next:hover {
+    border-color: var(--black_color);
+    color: #fff;
+    background: var(--black_color);
+}
+/*==== Slider css end ====*/
 /*==== page banner css Start ====*/
 .page_banner_section {
     position: relative;
-    padding: 158px 0 50px;
+    padding: 110px 0px 40px;
     background: #ffffff url(../images/bg/page_banner_bg.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
+    z-index: 1;
 }
+
 .page_banner_section .overlay {
-    opacity: 0.7;
+    z-index: -1;
+	opacity:0.6;
 }
-.page_banner_title h3 {
-    font-size: 24px;
-    margin: 0;
+.page_banner_title{
+
+}
+.page_banner_title .page-title {
+    font-size: 46px;
+    margin: 0 0 15px;
     text-transform: capitalize;
     letter-spacing: 0.02em;
     font-weight: 600;
     color: #fff;
-}
-.breadcrumb_wrapper {
-    text-align: right;
+    line-height: 40px;
 }
 .breadcrumb_wrapper .breadcrumb {
     background-color: transparent;
@@ -881,6 +963,7 @@ button:focus, input:focus, select:focus, textarea:focus{
     letter-spacing: 0.03em;
     padding: 0 5px;
     position: relative;
+	font-size:16px;
 }
 .breadcrumb > li+li:before {
     content: "/";
@@ -890,13 +973,10 @@ button:focus, input:focus, select:focus, textarea:focus{
 .breadcrumb_wrapper .breadcrumb > li > a {
     color: #ffffff;
     text-decoration: none;
-}
-.breadcrumb > li > a i {
-    margin-right: 4px;
-    font-size: 15px;
+	font-size:16px;
 }
 .breadcrumb_wrapper .breadcrumb > li > a:hover {
-    color: var(--secondary_color);
+    color: var(--green_color);
 }
 /*==== page banner css End ====*/
 /*==== Section Heading css start  ====*/
@@ -908,17 +988,30 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 .section_heading .heading_dv {
     display: inline-block;
-    max-width: 530px;
+    max-width: 600px;
 }
 .section_heading .heading_dv h3 {
     font-size: 2.25rem;
     line-height: 2.5rem;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 .section_heading .heading_dv p {
     font-size: 1.25rem;
     line-height: 1.75rem;
     margin-bottom: 20px;
+	color:#999999;
+}
+.jumbo_caption_box .heading_tittle {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 14px;
+}
+.jumbo_caption_box p {
+    font-size: 17px;
+    line-height: 27px;
+	color:#999999;
 }
 /*==== Section Heading css End  ====*/
 /*==== video section css start  ====*/
@@ -950,15 +1043,30 @@ button:focus, input:focus, select:focus, textarea:focus{
     z-index: -1;
 }
 .why_choose_box h2 {
-    font-size: 32px;
+    font-size: 30px;
     color: #FFFFFF;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+}
+.why_choose_box h3 {
+    font-size: 20px;
+    color: #fff;
 }
 .why_choose_box p {
     color: #fff;
     font-size: 18px;
     line-height: 26px;
     font-weight: 300;
+}
+.why_choose_box .best_p {
+    margin-bottom: 5px;
+}
+.why_choose_box p a{
+    color: #fff;
+	text-decoration:none;
+	font-size:17px;
+}
+.why_choose_box p a:hover{
+    color: #000000;
 }
 .why_choose_box ul {
     padding: 0;
@@ -1130,6 +1238,10 @@ button:focus, input:focus, select:focus, textarea:focus{
     color: #fff;
     font-size: 19px;
     line-height: 1.65rem;
+}
+.product_items .titles h3 a {
+    text-decoration: none;
+    color: inherit;
 }
 .product_items .titles .amount {
     background: #fff;
@@ -1379,7 +1491,6 @@ button:focus, input:focus, select:focus, textarea:focus{
     padding: 20px 20px 35px;
     border-radius: 8px;
     text-align: center;
-    margin-bottom: 30px;
 }
 .testimonial_body svg{
 	z-index:-1;
@@ -1424,11 +1535,11 @@ button:focus, input:focus, select:focus, textarea:focus{
     object-fit: cover;
 }
 .testimonial_body h3 {
-	font-size: 1.875rem;
-	line-height: 2.25rem;
-	font-weight: 500;
-	color:#ffffff;
-	margin:0;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0;
 }
 .testimonial_body .username {
 	font-size: 1.125rem;
@@ -1508,3 +1619,160 @@ button:focus, input:focus, select:focus, textarea:focus{
     display: inline-block;
 }
 /*==== footer section css end ====*/
+/*==== Newsletter section css start ====*/
+.newsletter_section .row {
+    align-items: center;
+}
+.newsletter_section{
+	background:var(--dark_gray);
+	padding:30px 0px;
+}
+.newsletter_title h3 {
+    font-size: 26px;
+    margin: 0;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+.newsletter_form .input-group {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+.newsletter_form .input-group input[type="email"] {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    padding: 0 80px 0 15px;
+    border-radius: 5px;
+}
+.newsletter_form .input-group .submit_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 45px;
+    line-height: 45px;
+    border: none;
+    padding: 0 9px;
+    text-transform: capitalize;
+    font-size: 14px;
+    background: var(--green_color);
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+}
+.newsletter_form .input-group .submit_btn:hover {
+    background: var(--black_color);
+}
+/*==== Newsletter section css end ====*/
+/*==== why AR css start ====*/
+.why_ar_box_container {
+    display: inline-block;
+    width: 100%;
+    background: #ffffff;
+    padding: 0 20px;
+}
+.why_ar_box {
+    display: inline-block;
+    width: 100%;
+    padding: 20px 0;
+}
+.why_ar_box .img_box img {
+    width: 86px;
+	margin-bottom:10px;
+}
+.why_ar_box h3 {
+    font-size: 22px;
+    color: #07294d;
+    margin-bottom: 13px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+.why_ar_box p {
+    margin-bottom: 0;
+    color: #999;
+}
+/*==== why AR css end ====*/
+/*==== why AR css start ====*/
+.ar_app_box {
+    display: inline-block;
+    width: 100%;
+	text-align:center;
+	margin-bottom:40px;
+}
+.ar_app_box .img_box {
+    margin-bottom: 15px;
+}
+.ar_app_box .img_box img {
+    height: 115px;
+}
+.ar_app_box h3 {
+    font-size: 22px;
+    color: #07294d;
+    margin-bottom: 0px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+/*==== why AR css end ====*/
+/*==== every one code css start ====*/
+.resources_banner{
+    background: #32B275;
+	padding: 12px 20px;
+	display:inline-block;
+	width:100%;
+}
+.resources_banner_txt {
+    width: 100%;
+	max-width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.resources_banner_txt .titles {
+    
+}
+.resources_banner_txt .titles h3 {
+    font-size: 21px;
+    line-height: 25px;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 1px;
+}
+.resources_banner_txt .btn_dv {
+    
+}
+.resources_banner_txt .login_btn {
+    display: inline-block;
+    font-size: 15px;
+    height: 36px;
+    line-height: 34px;
+    padding: 0 20px;
+    border-radius: 2em;
+    color: #fff;
+    border: 2px solid;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.resources_banner_txt .login_btn:hover {
+	background:#ffffff;
+	color: var(--black_color);
+}
+.code_text_column h3 {
+    font-size: 22px;
+    line-height: 25px;
+    margin-bottom: 10px;
+	letter-spacing: 1px;
+}
+.code_text_column .back_div a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--green_color);
+}
+.code_text_column .back_div a i {
+    margin-right: 10px;
+}
+.code_text_column .back_div a:hover {
+    color: var(--black_color);
+}
+/*==== every one code css end ====*/

@@ -14,10 +14,10 @@
 	//fix header on scroll
 	var win_scroll = $(window).scrollTop();
 	$(window).on('bind scroll', function(e) {
-		if ($(window).scrollTop() > 500) {
-			$('.navigation_header_wrap').addClass('fixed_menu');
+		if ($(window).scrollTop() > 200) {
+			$('.main_header').addClass('fixed_menu');
 		} else {
-			$('.navigation_header_wrap').removeClass('fixed_menu');
+			$('.main_header').removeClass('fixed_menu');
 		}	
 	});
 	//payment radio check
@@ -32,8 +32,23 @@
 	
 	//scroll carousel
 	//Brands slider
-	$(".product_slider").owlCarousel({
-		items:4,
+	$(".home_slider").owlCarousel({
+		items:1,
+		singleItem:true,
+		loop:true,
+		margin:0,
+		autoplay:false,
+		autoplayHoverPause:true,
+		autoplayTimeout:2000,
+		autoplaySpeed:1500,
+		smartSpeed:1500,
+		dots:false,
+		nav:true,
+		navText:["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
+	});
+	//Brands slider
+	$(".testimonial_slider").owlCarousel({
+		items:2,
 		loop:true,
 		margin:15,
 		autoplay:true,
@@ -51,18 +66,12 @@
 				margin:10,
 			},
 			600 : {
-				items: 2,
+				items: 1,
 				margin:10,
-			},
-			768 : {
-				items: 2
 			},
 			992 : {
-				items: 3,
+				items: 2,
 				margin:10,
-			},
-			1200 : {
-				items:4
 			}
 		}
 	});
@@ -150,7 +159,7 @@
 	if ($('#product_filter_div').length > 0){
 		$('#product_filter_div').mixItUp({
 			load: {
-				filter: '.desktops'
+				filter: '.mac'
 			},
 		  selectors: {
 			target: '.mix-target',
@@ -184,4 +193,28 @@
 	$(".close_search").on("click",function(){
 		$(this).parents(".search_bar_menu").slideUp(100);
 	});
+	//On click Navigation scroll body and section
+	$(document).ready(function() {
+		$('.navigation_menu .links').on('click', function(e) {
+			e.preventDefault();
+			$('.navigation_menu .links').removeClass('active');
+			$(this).addClass('active');
+			var target = $(this).attr("href");
+			// return false;
+			$('html, body').animate({
+			scrollTop: $( $.attr(this, 'href') ).offset().top
+			}, 1000);
+			return false;
+		});
+	});
+	// $(window).scroll(function() {
+		// var scrollDistance = $(window).scrollTop();
+		// // Assign active class to nav links while scolling
+		// $('.page_sections').each(function(i) {
+			// if ($(this).position().top <= scrollDistance+80) {
+				// $('.navigation_menu a.active').removeClass('active');
+				// $('.navigation_menu a').eq(i).addClass('active');
+			// }
+		// });
+	// }).scroll();
 })(jQuery);
