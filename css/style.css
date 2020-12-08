@@ -1013,6 +1013,10 @@ button:focus, input:focus, select:focus, textarea:focus{
     line-height: 27px;
 	color:#999999;
 }
+.jumbo_caption_box p a {
+    text-decoration: none;
+    color: var(--green_color);
+}
 /*==== Section Heading css End  ====*/
 /*==== video section css start  ====*/
 .site_video_dv iframe{
@@ -1593,6 +1597,9 @@ button:focus, input:focus, select:focus, textarea:focus{
     background: var(--black_color);
     padding: 13px 0;
 }
+.footer_section > .container > .row {
+    align-items: center;
+}
 .copyright_dv .f_logo {
     display: inline-block;
     padding: 5px 10px 5px 0;
@@ -1713,6 +1720,52 @@ button:focus, input:focus, select:focus, textarea:focus{
     text-transform: capitalize;
 }
 /*==== why AR css end ====*/
+/*==== about page css end ====*/
+.company_logos {
+    text-align: center;
+}
+.company_logos h3 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.company_logos .l_text {
+    display: inline-block;
+    padding: 8px 22px;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 10px 5px 0;
+}
+.about_best_text {
+    padding: 15px;
+    background: #f1f1f1;
+    margin-bottom: 30px;
+    min-height: 264px;
+}	
+.about_best_text h3 {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+.customer_trust_txt {
+    text-align: center;
+    padding: 25px 0;
+}
+.customer_trust_txt h3 {
+    margin: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 0.03em;
+}
+.logos_slider .item {
+    text-align: center;
+}
+/*==== about page css end ====*/
 /*==== every one code css start ====*/
 .resources_banner{
     background: #32B275;
@@ -1776,3 +1829,129 @@ button:focus, input:focus, select:focus, textarea:focus{
     color: var(--black_color);
 }
 /*==== every one code css end ====*/
+/*==== every one code page css start ====*/
+.education_text_box{
+	text-align:center;
+	margin-bottom:40px;
+}
+.education_text_box .icon_box {
+    margin-bottom: 20px;
+}
+.education_text_box .icon_box span {
+    display: inline-block;
+    width: 66px;
+    height: 66px;
+    line-height: 66px;
+    border-radius: 50%;
+    color: #fff;
+    border: 2px solid;
+    text-align: center;
+    font-size: 33px;
+}
+.education_text_box .content_box h3 {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 22px;
+    line-height: 25px;
+}
+.education_text_box .content_box p {
+    color: #ffffff;
+	margin:0;
+}
+/*==== every one code page css end ====*/
+/*==== education swift css start ====*/
+.swift_text_colm {
+    padding-left: 30px;
+}
+.swift_text_colm .swift_icon {
+    margin-bottom: 20px;
+}
+.swift_text_colm .swift_icon img {
+    height: 60px;
+}
+.code_text_column .swift_btn {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    height: 40px;
+    line-height: 40px;
+    background: var(--green_color);
+    color: #fff;
+    display: inline-block;
+    padding: 0 30px;
+    border-radius: 2em;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+.mac_text_colm{
+	padding-right:30px;
+}
+/*==== education swift css end ====*/
+/*==== apple education css start ====*/
+.education_page_text_2 p {
+    font-size: 18px;
+    line-height: 29px;
+    margin-bottom: 0;
+}
+.apple_edu_text{
+	margin-bottom:50px;
+}
+.apple_edu_text .heading_title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.4em;
+	margin-bottom:15px;
+}
+.apple_benefits_colm{
+	margin-bottom:50px;
+}
+.apple_benefits_colm .heading_title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.4em;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+.apple_benefits_colm ul {
+    margin: 0;
+    padding-left: 35px;
+}
+.apple_benefits_colm ul li {
+    font-size: 17px;
+    color: var(--black_color);
+    margin-bottom: 5px;
+}	
+.apple_benefits_colm {
+    padding: 30px 20px;
+    border: 5px solid #505050;
+    background: #f5f5f5;
+}
+/*==== apple education css end ====*/
+.edu_learn_text h3 {
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.edu_learn_text .button_wrap .btns {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    height: 40px;
+    line-height: 40px;
+    background: var(--black_color);
+    color: #fff;
+    display: inline-block;
+    padding: 0 30px;
+    border-radius: 2em;
+    letter-spacing: 1px;
+	margin:5px;
+}
+.edu_learn_text .button_wrap .btns:hover {
+    background: #ffffff;
+	color: var(--black_color);
+}

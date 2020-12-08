@@ -31,7 +31,7 @@
 	});
 	
 	//scroll carousel
-	//Brands slider
+	//home slider
 	$(".home_slider").owlCarousel({
 		items:1,
 		singleItem:true,
@@ -46,7 +46,7 @@
 		nav:true,
 		navText:["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
 	});
-	//Brands slider
+	//Testimonial slider
 	$(".testimonial_slider").owlCarousel({
 		items:2,
 		loop:true,
@@ -71,6 +71,43 @@
 			},
 			992 : {
 				items: 2,
+				margin:10,
+			}
+		}
+	});
+	//Logos slider
+	$(".logos_slider").owlCarousel({
+		items:5,
+		loop:true,
+		margin:10,
+		autoplay:true,
+		autoplayHoverPause:true,
+		autoplayTimeout:3000,
+		autoplaySpeed:1500,
+		smartSpeed:1500,
+		dots:false,
+		nav:true,
+		navText:["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
+		responsiveClass: true,
+		responsive : {
+			0 : {
+				items: 1,
+				margin:10,
+			},
+			375 : {
+				items: 2,
+				margin:5,
+			},
+			600 : {
+				items: 3,
+				margin:10,
+			},
+			992 : {
+				items: 4,
+				margin:10,
+			},
+			1200 : {
+				items: 5,
 				margin:10,
 			}
 		}
