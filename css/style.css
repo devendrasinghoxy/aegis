@@ -927,7 +927,9 @@ button:focus, input:focus, select:focus, textarea:focus{
 .page_banner_section {
     position: relative;
     padding: 110px 0px 40px;
-    background: #ffffff url(../images/bg/page_banner_bg.jpg) no-repeat;
+    background-color: var(--black_color);
+    background-image: url(../images/bg/page_banner_bg.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     z-index: 1;
@@ -1036,7 +1038,7 @@ button:focus, input:focus, select:focus, textarea:focus{
 .why_choose_box{
 	display: inline-block;
 	width: 100%;
-	padding:3rem;
+	padding:30px;
 	border-radius: 1.5rem;
 	position:relative;
 	z-index:1;
@@ -1721,35 +1723,63 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 /*==== why AR css end ====*/
 /*==== about page css end ====*/
+.about_page_text .heading_tittle {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 40px;
+    margin-bottom: 14px;
+}
+.about_page_text p {
+    font-size: 17px;
+    line-height: 27px;
+	color:#999999;
+}
 .company_logos {
     text-align: center;
 }
-.company_logos h3 {
-    font-size: 24px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 15px;
-}
-.company_logos .l_text {
-    display: inline-block;
-    padding: 8px 22px;
-    background: #fff;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: capitalize;
-    margin: 10px 5px 0;
-}
 .about_best_text {
+	display: inline-block;
+	width:100%;
+	text-align:center;
+    margin-bottom: 20px;
+}
+.about_best_text > span i {
+    margin-right: 7px;
+}
+.about_best_text > span {
+    display: inline-block;
+    background: var(--green_color);
+    color: #fff;
+    padding: 5px 14px;
+    margin: 0 3px;
+    border-radius: 2em;
+}
+.about_best_colm {
     padding: 15px;
-    background: #f1f1f1;
+    background: #fff;
     margin-bottom: 30px;
-    min-height: 264px;
-}	
-.about_best_text h3 {
+    text-align: center;
+    box-shadow: 0 0 12px rgb(0 0 0 / 34%);
+    -webkit-box-shadow: 0 0 12px rgb(0 0 0 / 34%);
+    -moz-box-shadow: 0 0 12px rgb(0 0 0 / 34%);
+    border-radius: 8px;
+}
+.about_best_colm .icon_box {
+    display: inline-block;
+    background: var(--green_color);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 24px;
+}
+.about_best_colm h3 {
     font-size: 24px;
     font-weight: 900;
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 .customer_trust_txt {
     text-align: center;
@@ -1776,12 +1806,11 @@ button:focus, input:focus, select:focus, textarea:focus{
 .resources_banner_txt {
     width: 100%;
 	max-width:100%;
+	display: -ms-flexbox;
+	display: -webkit-flex;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.resources_banner_txt .titles {
-    
 }
 .resources_banner_txt .titles h3 {
     font-size: 21px;
@@ -1932,7 +1961,7 @@ button:focus, input:focus, select:focus, textarea:focus{
 .edu_learn_text h3 {
     font-size: 30px;
     text-transform: capitalize;
-    font-weight: 500;
+    font-weight: 600;
     color: #fff;
     margin-bottom: 20px;
 }

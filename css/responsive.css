@@ -289,6 +289,19 @@
 	.code_text_column {
 		padding-top: 30px;
 	}
+	.resources_banner {
+		padding: 17px 20px;
+	}
+	.resources_banner_txt{    
+		justify-content: center;
+		text-align: center;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	.resources_banner_txt .btn_dv {
+		margin-top: 19px;
+	}
 }
 @media(max-width:991px){
 	/* footer css */
