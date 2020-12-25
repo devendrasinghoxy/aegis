@@ -28,6 +28,10 @@
 	.mac_text_colm{
 		padding-right:0px;
 	}
+	.education_white_colm .content_box h3 {
+		font-size: 26px;
+		margin-bottom: 11px;
+	}
 }
 @media(min-width:992px){
 	.caret_down {
@@ -326,6 +330,16 @@
 		font-size: 26px;
 		line-height: 30px;
 	}
+	/* jumbo caption css */
+	.jumbo_caption_box .heading_tittle {
+		font-size: 36px;
+		line-height: 46px;
+	}
+	.jumbo_caption_box p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	/* jumbo caption css */
 }
 @media(min-width:768px){
 	.a_prof_col {
@@ -500,6 +514,39 @@
 		width: 30px;
 		height: 30px;
 		line-height: 28px;
+	}
+}
+@media(max-width:767px){
+	.education_hero_text h3 {
+		font-size: 30px;
+		line-height: 35px;
+	}
+	.education_hero_text p {
+		font-size: 16px;
+		line-height: 25px;
+	}
+	.edu_page_title .page-title{
+		font-size: 30px;
+		line-height: 33px;
+	}
+	.edu_page_title p{
+		font-size: 16px;
+		line-height: 25px;
+	}
+	/* jumbo caption css */
+	.jumbo_caption_box .heading_tittle {
+		font-size: 30px;
+		line-height: 37px;
+		margin-bottom: 10px;
+	}
+	/* jumbo caption css */
+	.education_white_colm {
+		border-radius: 10px;
+		padding: 20px 15px;
+		min-height: auto;
+	}
+	.education_white_colm .content_box p {
+		font-size: 15px;
 	}
 }
 @media(max-width:480px){

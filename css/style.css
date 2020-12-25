@@ -57,7 +57,7 @@ p {
 img{
 	max-width:100%;
 }
-.img_box{
+.img_box {
 	display:inline-block;
 	position:relative;
 }
@@ -231,6 +231,12 @@ img{
 /*=== Padding top css End ===*/
 
 /*=== Padding bottom css start ===*/
+.pad_bottom_10 {
+	padding-bottom:10px;
+}
+.pad_bottom_20 {
+	padding-bottom:20px;
+}
 .pad_bottom_30 {
 	padding-bottom:30px;
 }
@@ -488,6 +494,34 @@ button:focus, input:focus, select:focus, textarea:focus{
 	width:100%;
 }
 /*=== common css End ===*/
+/*=== Skew Design css start ===*/
+.skew_design {
+    position: relative;
+    z-index: 1;
+}
+.skew_design:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #ffffff;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform-origin: right top;
+    -webkit-transform-origin: right top;
+    -moz-transform-origin: right top;
+    -ms-transform-origin: right top;
+    -webkit-transform: skewY(1deg);
+    -moz-transform: skewY(1deg);
+    -ms-transform: skewY(1deg);
+    -o-transform: skewY(1deg);
+    transform: skewY(1deg);
+}
+.skew_design.bg_gray:before {
+    background-color: #e7e9ed;
+}
+/*=== Skew Design css End ===*/
 /*=== Modal css Start ===*/
 .modal-header {
     display: inline-block;
@@ -926,7 +960,7 @@ button:focus, input:focus, select:focus, textarea:focus{
 /*==== page banner css Start ====*/
 .page_banner_section {
     position: relative;
-    padding: 110px 0px 40px;
+    padding: 130px 0px 60px;
     background-color: var(--black_color);
     background-image: url(../images/bg/page_banner_bg.jpg);
     background-repeat: no-repeat;
@@ -934,13 +968,9 @@ button:focus, input:focus, select:focus, textarea:focus{
     background-position: center center;
     z-index: 1;
 }
-
 .page_banner_section .overlay {
     z-index: -1;
 	opacity:0.6;
-}
-.page_banner_title{
-
 }
 .page_banner_title .page-title {
     font-size: 46px;
@@ -950,6 +980,11 @@ button:focus, input:focus, select:focus, textarea:focus{
     font-weight: 600;
     color: #fff;
     line-height: 40px;
+}
+.page_banner_title p {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 .breadcrumb_wrapper .breadcrumb {
     background-color: transparent;
@@ -1007,7 +1042,7 @@ button:focus, input:focus, select:focus, textarea:focus{
 .jumbo_caption_box .heading_tittle {
     font-size: 40px;
     font-weight: 600;
-    line-height: 40px;
+    line-height: 50px;
     margin-bottom: 14px;
 }
 .jumbo_caption_box p {
@@ -1918,46 +1953,161 @@ button:focus, input:focus, select:focus, textarea:focus{
 	padding-right:30px;
 }
 /*==== education swift css end ====*/
-/*==== apple education css start ====*/
-.education_page_text_2 p {
-    font-size: 18px;
+/*==== education Text one css start ====*/
+.edu_text_1 .img_box {
+    margin-bottom: 25px;
+}
+.edu_text_1 .img_box img {
+    max-height:400px;
+}
+/*==== education Text one css End ====*/
+/*==== getting start text section css End ====*/
+.getting_white_box {
+    padding: 40px 20px 40px;
+    background: #ffffff;
+    border-radius: 15px;
+}
+.getting_start_text .heading_tittle {
+    margin-top: 15px;
+}
+/*==== getting start text section css End ====*/
+/*==== education Hero Text css start ====*/
+.education_hero_text_section {
+    position: relative;
+    background-color: var(--black_color);
+    background-image: url(../images/bg/education_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: 1;
+}
+.education_hero_text_section .overlay {
+    z-index: -1;
+}
+.education_hero_text h3 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.education_hero_text p {
+    font-size: 19px;
     line-height: 29px;
     margin-bottom: 0;
+    color: #ffffff;
 }
-.apple_edu_text{
-	margin-bottom:50px;
+/*==== education Hero Text css End ====*/
+/*==== education white colm start ====*/
+.education_white_colm {
+    margin-bottom: 50px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px 20px;
+    text-align: center;
+    min-height: 500px;
 }
-.apple_edu_text .heading_title {
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 1.4em;
-	margin-bottom:15px;
+.education_white_colm .img_box {
+    margin-bottom: 25px;
 }
-.apple_benefits_colm{
-	margin-bottom:50px;
+.education_white_colm .img_box img {
+    max-height: 191px;
 }
-.apple_benefits_colm .heading_title {
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 1.4em;
+.education_white_colm .content_box h3 {
+    font-size: 30px;
+    font-weight: 700;
     margin-bottom: 15px;
-    text-transform: capitalize;
 }
-.apple_benefits_colm ul {
+.education_white_colm .content_box p {
+    font-weight: 500;
+    font-size: 16px;
+}
+/*==== education white colm end ====*/
+/*==== education Contact Section start ====*/
+.education_contact_section{
+	
+}
+.edu_contact_form {
+    padding: 30px 25px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+.edu_form_heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.edu_form_heading h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.edu_form_heading p {
+    font-size: 18px;
+}
+.edu_contact_form .input_group {
+    position: relative;
+    width: 100%;
+    float: left;
+    margin-bottom: 18px;
+}
+.edu_contact_form .input_group input, 
+.edu_contact_form .input_group select, 
+.edu_contact_form .input_group textarea {
+    background: #fafafa;
+    border-radius: 2px;
+    border: 1px solid #d6d8d9;
+    color: #777777;
+	width:100%;
+    height: 45px;
+    padding: 5px 10px;
+}
+.edu_contact_form .input_group textarea {
+	height:90px;
+	padding-top:10px;
+	resize:none;
+}
+.edu_contact_form .input_group input:focus, 
+.edu_contact_form .input_group select:focus, 
+.edu_contact_form .input_group textarea:focus {
+    border-color: #333333;
+}
+.edu_contact_form .input_group .error_txt {
+	display:none;
+    position: absolute;
+    top: -4px;
+    z-index: 103;
+    font-size: 13px;
+    line-height: 8px;
     margin: 0;
-    padding-left: 35px;
+    padding: 0;
+    border: 0;
+    margin-top: 0;
+    background: #fff;
+    right: 30px;
+    color: red;
 }
-.apple_benefits_colm ul li {
-    font-size: 17px;
-    color: var(--black_color);
-    margin-bottom: 5px;
-}	
-.apple_benefits_colm {
-    padding: 30px 20px;
-    border: 5px solid #505050;
-    background: #f5f5f5;
+.edu_contact_form .input_group .star {
+    position: absolute;
+    color: red;
+    top: 2px;
+    right: -4px;
+    font-size: 26px;
 }
-/*==== apple education css end ====*/
+.edu_contact_form .input_group i {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    cursor: text;
+    font-size: 1.25em;
+    background-color: transparent;
+}
+.edu_contact_form .submit_button {
+    text-align: center;
+    width: 150px;
+    border-radius: 4px;
+}
+/*==== education Contact Section end ====*/
+
+/*==== education Learn css start ====*/
 .edu_learn_text h3 {
     font-size: 30px;
     text-transform: capitalize;
@@ -1984,3 +2134,83 @@ button:focus, input:focus, select:focus, textarea:focus{
     background: #ffffff;
 	color: var(--black_color);
 }
+/*==== education Learn css end ====*/
+/*==== education page banner css start ====*/
+/*==== page banner css Start ====*/
+.edu_page_banner {
+    position: relative;
+    padding: 40px 0;
+    background-color: var(--black_color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: 1;
+	min-height:100vh;
+	display: -ms-flexbox;
+	display: flex;
+	display: -webkit-flex;
+	-ms-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	align-items:center;
+}
+.page_banner_container{
+	width:100%;
+	display:inline-block;
+}
+.edu_solution_banner {
+    background-image: url(../images/bg/education_bg.jpg);
+}
+.edu_page_banner .overlay {
+    z-index: -1;
+	opacity:0.6;
+}
+.edu_page_title .page-title {
+    font-size: 40px;
+    margin: 0 0 15px;
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
+    font-weight: 700;
+    color: #fff;
+    line-height: 40px;
+}
+.edu_page_title p {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 0;
+    line-height: 29px;
+}
+/*==== education page banner css end ====*/
+/*==== ipad education section css start ====*/
+.ipad_edu_section .section_heading .heading_dv {
+    width: 100%;
+    max-width: 100%;
+}
+.ipad_edu_banner {
+    background-image: url(../images/bg/ipad_edu_bg.jpg);
+}
+.ipad_edu_boxs {
+    background: #fff;
+    box-shadow: 0 0 12px rgb(0 0 0 / 32%);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    border-top: 5px solid var(--green_color);
+    min-height: 435px;
+}
+.ipad_edu_boxs .img_box img {
+    max-height: 150px;
+}
+.ipad_edu_boxs .content_box h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 15px;
+}
+.ipad_edu_boxs .content_box p {
+    margin-bottom: 0;
+    color: #777;
+    line-height: 25px;
+    font-size: 16px;
+}
+/*==== ipad education section css end ====*/
