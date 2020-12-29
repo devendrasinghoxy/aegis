@@ -112,6 +112,21 @@
 			}
 		}
 	});
+	//success stories slider
+	$(".success_story_slider").owlCarousel({
+		items:1,
+		singleItem:true,
+		loop:true,
+		margin:15,
+		autoplay:true,
+		autoplayHoverPause:true,
+		autoplayTimeout:3000,
+		autoplaySpeed:1500,
+		smartSpeed:1500,
+		dots:false,
+		nav:true,
+		navText:["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
+	});
 	//gallery js
 	$('.gallery_popup_wrapper').magnificPopup({
 		delegate: '.glr_popup_icon',

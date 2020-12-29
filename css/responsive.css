@@ -340,6 +340,10 @@
 		line-height: 24px;
 	}
 	/* jumbo caption css */
+	.ipad_edu_boxs {
+		min-height: auto;
+		height: auto;
+	}
 }
 @media(min-width:768px){
 	.a_prof_col {
@@ -348,6 +352,20 @@
 	}
 	.a_text_col{
 		padding-left:30px;
+	}
+}
+@media(max-width:767px){
+	.ipad_edu_boxs .img_box img {
+		max-height: 90px;
+		border-radius: 5px;
+	}
+	.ipad_edu_boxs .content_box h3 {
+		font-size: 26px;
+		margin-bottom: 10px;
+	}
+	.ipad_edu_boxs .content_box p {
+		line-height: 24px;
+		font-size: 15px;
 	}
 }
 @media(max-width:767px){
@@ -525,9 +543,9 @@
 		font-size: 16px;
 		line-height: 25px;
 	}
-	.edu_page_title .page-title{
+	.edu_page_title .page-title {
 		font-size: 30px;
-		line-height: 33px;
+		line-height: 37px;
 	}
 	.edu_page_title p{
 		font-size: 16px;
@@ -548,8 +566,23 @@
 	.education_white_colm .content_box p {
 		font-size: 15px;
 	}
+	/* Education form */
+	.edu_form_heading h3 {
+		font-size: 22px;
+	}
+	.edu_form_heading p {
+		font-size: 15px;
+		line-height: 22px;
+	}
+	/* Education form */
 }
 @media(max-width:480px){
+	/* jumbo caption css */
+	.jumbo_caption_box .heading_tittle {
+		font-size: 26px;
+		line-height: 33px;
+	}
+	/* jumbo caption css */
 	.slider_caption h1 {
 		font-size: 20px;
 		font-weight: 700;
@@ -578,6 +611,23 @@
 		border-radius: 5px;
 	}
 	/* Newsletter css */
+	.ipad_edu_boxs .img_box img {
+		max-height: 70px;
+	}
+	.ipad_edu_boxs .content_box h3 {
+		font-size: 22px;
+		margin-bottom: 9px;
+	}
+	/* education page banner */
+	.edu_page_title .page-title {
+		font-size: 24px;
+		line-height: 32px;
+	}
+	.edu_page_title p {
+		font-size: 15px;
+		line-height: 23px;
+	}
+	/* education page banner */
 }
 @media(max-width:460px){
 	.stats_colm {
