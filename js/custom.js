@@ -114,10 +114,9 @@
 	});
 	//success stories slider
 	$(".success_story_slider").owlCarousel({
-		items:1,
-		singleItem:true,
+		items:5,
 		loop:true,
-		margin:15,
+		margin:10,
 		autoplay:true,
 		autoplayHoverPause:true,
 		autoplayTimeout:3000,
@@ -126,6 +125,29 @@
 		dots:false,
 		nav:true,
 		navText:["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
+		responsiveClass: true,
+		responsive : {
+			0 : {
+				items: 1,
+				margin:5,
+			},
+			375 : {
+				items: 2,
+				margin:5,
+			},
+			600 : {
+				items: 3,
+				margin:10,
+			},
+			992 : {
+				items: 4,
+				margin:10,
+			},
+			1200 : {
+				items: 5,
+				margin:10,
+			}
+		}
 	});
 	//gallery js
 	$('.gallery_popup_wrapper').magnificPopup({

@@ -28,9 +28,18 @@
 	.mac_text_colm{
 		padding-right:0px;
 	}
+	/* education white colm css */
 	.education_white_colm .content_box h3 {
 		font-size: 26px;
 		margin-bottom: 11px;
+	}
+	/* education white colm css */
+	.mac_blog_content h3 {
+		font-size: 22px;
+	}
+	.mac_blog_content p {
+		font-size: 15px;
+		line-height: 25px;
 	}
 }
 @media(min-width:992px){
@@ -65,6 +74,34 @@
 		display:none !important;
 	}
 	.row_reverse {
+		-webkit-flex-direction: row-reverse;
+		-ms-flex-direction: row-reverse;
+		-moz-flex-direction: row-reverse;
+		flex-direction: row-reverse;
+	}
+	/* maclab blogs css */
+	.maclab_blogs_section .row:nth-child(even) {
+		-webkit-flex-direction: row-reverse;
+		-ms-flex-direction: row-reverse;
+		-moz-flex-direction: row-reverse;
+		flex-direction: row-reverse;
+	}
+	.maclab_blogs_section .row:nth-child(odd) .mac_b_img {
+		padding-right: 0;
+	}
+	.maclab_blogs_section .row:nth-child(odd) .mac_blog_content {
+		padding-left: 15px;
+	}
+	.maclab_blogs_section .row:nth-child(even) .mac_b_img {
+		padding-left: 0;
+	}
+	.maclab_blogs_section .row:nth-child(even) .mac_blog_content {
+		padding-right: 15px;
+	}
+	/* maclab blogs css */
+}
+@media(min-width:768px){
+	.ipad_edu_boxs:nth-child(even) {
 		-webkit-flex-direction: row-reverse;
 		-ms-flex-direction: row-reverse;
 		-moz-flex-direction: row-reverse;
@@ -261,6 +298,9 @@
 		margin-bottom: 8px;
 	}
 	/*== blog css End ==*/
+	.education_colm_border {
+		border-right: none;
+	}
 }
 @media(max-width:991px){
 	/* Breadcrumb css */
@@ -306,6 +346,16 @@
 	.resources_banner_txt .btn_dv {
 		margin-top: 19px;
 	}
+	.success_story_container {
+		margin-bottom: 35px;
+	}
+	.mac_blog_content {
+		padding-top: 20px;
+		padding-bottom: 30px;
+	}
+	.mac_blog_content:last-child {
+		padding-bottom:0px;
+	}
 }
 @media(max-width:991px){
 	/* footer css */
@@ -340,10 +390,6 @@
 		line-height: 24px;
 	}
 	/* jumbo caption css */
-	.ipad_edu_boxs {
-		min-height: auto;
-		height: auto;
-	}
 }
 @media(min-width:768px){
 	.a_prof_col {
@@ -355,18 +401,26 @@
 	}
 }
 @media(max-width:767px){
+	/* ipad education box */
+	.ipad_edu_boxs .img_box, .ipad_edu_boxs .content_box {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+		text-align:center;
+	}
 	.ipad_edu_boxs .img_box img {
-		max-height: 90px;
-		border-radius: 5px;
+		height: 90px;
+		width: 90px;
 	}
 	.ipad_edu_boxs .content_box h3 {
 		font-size: 26px;
-		margin-bottom: 10px;
+		margin-top: 20px;
 	}
 	.ipad_edu_boxs .content_box p {
 		line-height: 24px;
 		font-size: 15px;
 	}
+	/* ipad education box */
 }
 @media(max-width:767px){
 	.main_header {
@@ -558,14 +612,14 @@
 		margin-bottom: 10px;
 	}
 	/* jumbo caption css */
+	/* education white colm css */
 	.education_white_colm {
-		border-radius: 10px;
-		padding: 20px 15px;
 		min-height: auto;
 	}
 	.education_white_colm .content_box p {
 		font-size: 15px;
 	}
+	/* education white colm css */
 	/* Education form */
 	.edu_form_heading h3 {
 		font-size: 22px;
@@ -611,13 +665,16 @@
 		border-radius: 5px;
 	}
 	/* Newsletter css */
+	/* ipad education box */
 	.ipad_edu_boxs .img_box img {
-		max-height: 70px;
+		width: 70px;
+		height: 70px;
 	}
 	.ipad_edu_boxs .content_box h3 {
 		font-size: 22px;
 		margin-bottom: 9px;
 	}
+	/* ipad education box */
 	/* education page banner */
 	.edu_page_title .page-title {
 		font-size: 24px;

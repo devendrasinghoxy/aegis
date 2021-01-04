@@ -32,15 +32,15 @@ body {
   background: #a27cf7;
 }
 ::selection{
-	background-color:var(--green_color);
+	background-color:var(--black_color);
 	color:var(--white_color);
 }
 ::-moz-selection{
-	background-color:var(--green_color);
+	background-color:var(--black_color);
 	color:var(--white_color);
 }
 ::-webkit-selection {
-	background-color:var(--green_color);
+	background-color:var(--black_color);
 	color:var(--white_color);
 }
 h1, h2, h3, h4, h5{
@@ -100,11 +100,18 @@ img{
 }
 /*== main form css End ==*/
 .gradient_bg{
-	background: hsla(72, 61%, 57%, 1);
-	background: linear-gradient(90deg, hsla(72, 61%, 57%, 1) 2%, hsla(149, 93%, 36%, 1) 100%);
-	background: -moz-linear-gradient(90deg, hsla(72, 61%, 57%, 1) 2%, hsla(149, 93%, 36%, 1) 100%);
-	background: -webkit-linear-gradient(90deg, hsla(72, 61%, 57%, 1) 2%, hsla(149, 93%, 36%, 1) 100%);
-	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#BBD550", endColorstr="#06B259", GradientType=1 );
+	background: #a27cf7;
+	background: linear-gradient(90deg, #a27cf7 2%, #f59e0b 100%);
+	background: -moz-linear-gradient(90deg, #a27cf7 2%, #f59e0b 100%);
+	background: -webkit-linear-gradient(90deg, #a27cf7 2%, #f59e0b 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#a27cf7", endColorstr="#f59e0b", GradientType=1 );
+}
+.gradient_bg_2{
+	background: #f74af1;
+	background: -moz-linear-gradient(45deg,  #f74af1 0%, #f7a820 100%);
+	background: -webkit-linear-gradient(45deg,  #f74af1 0%,#f7a820 100%);
+	background: linear-gradient(45deg,  #f74af1 0%,#f7a820 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f74af1', endColorstr='#f7a820',GradientType=1 );
 }
 .shadow_box {
 	padding:20px;
@@ -438,7 +445,10 @@ button:focus, input:focus, select:focus, textarea:focus{
 	outline:none !important;
 }
 .bg_gray {
-    background-color: #e7e9ed;
+    background-color: #e9e9e7;
+}
+.bg_black {
+    background-color: #374151;
 }
 .owl-carousel .owl-item img {
     max-width: 100%;
@@ -520,6 +530,23 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 .skew_design.bg_gray:before {
     background-color: #e7e9ed;
+}
+.skew_design.bg_black:before {
+    background-color: #374151;
+}
+.skew_design.gradient_bg:before {
+	background: #a27cf7;
+	background: linear-gradient(90deg, #a27cf7 2%, #f59e0b 100%);
+	background: -moz-linear-gradient(90deg, #a27cf7 2%, #f59e0b 100%);
+	background: -webkit-linear-gradient(90deg, #a27cf7 2%, #f59e0b 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#a27cf7", endColorstr="#f59e0b", GradientType=1 );
+}
+.skew_design.gradient_bg_2:before {
+	background: #f74af1;
+	background: -moz-linear-gradient(45deg,  #f74af1 0%, #f7a820 100%);
+	background: -webkit-linear-gradient(45deg,  #f74af1 0%,#f7a820 100%);
+	background: linear-gradient(45deg,  #f74af1 0%,#f7a820 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f74af1', endColorstr='#f7a820',GradientType=1 );
 }
 /*=== Skew Design css End ===*/
 /*=== Modal css Start ===*/
@@ -649,9 +676,8 @@ button:focus, input:focus, select:focus, textarea:focus{
 .main_header {
     float: left;
     width: 100%;
-    background: rgb(0 0 0 / 67%);
+    background: #333333;
     padding: 0;
-    position: absolute;
     top: 0;
     left: 0;
     z-index: 11;
@@ -789,6 +815,7 @@ button:focus, input:focus, select:focus, textarea:focus{
     padding: 10px 10px;
     background: #fff;
     border-radius: 4px;
+    z-index: 11;
 }
 .search_bar_menu .inputs {
     position: relative;
@@ -891,14 +918,14 @@ button:focus, input:focus, select:focus, textarea:focus{
 /*======= Navigation Header css End ========*/
 /* == menu fix css == */
 .main_header.fixed_menu {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 11;
-	box-shadow: 0 0 12px rgba(0, 0, 0, 0.63);
-	-webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.63);
-	-moz-box-shadow: 0 0 12px rgba(0, 0, 0, 0.63);
-	width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.63);
+    -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.63);
+    -moz-box-shadow: 0 0 12px rgba(0, 0, 0, 0.63);
+    width: 100%;
 }
 /* == menu fix css == */
 /*==== Slider css Start ====*/
@@ -906,7 +933,8 @@ button:focus, input:focus, select:focus, textarea:focus{
 	position:relative;
 	z-index:1;
 }
-.slide_item .overlay{
+.slide_item .overlay {
+    opacity: 0.3;
 }
 .slider_caption_wrap {
     position: absolute;
@@ -925,7 +953,7 @@ button:focus, input:focus, select:focus, textarea:focus{
 	display:inline-block;
 }
 .slider_caption h1 {
-    font-size: 50px;
+    font-size: 47px;
     font-weight: 700;
     color: #fff;
     margin-top: 0;
@@ -960,7 +988,7 @@ button:focus, input:focus, select:focus, textarea:focus{
 /*==== page banner css Start ====*/
 .page_banner_section {
     position: relative;
-    padding: 130px 0px 60px;
+    padding: 70px 0px 70px;
     background-color: var(--black_color);
     background-image: url(../images/bg/page_banner_bg.jpg);
     background-repeat: no-repeat;
@@ -1025,7 +1053,7 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 .section_heading .heading_dv {
     display: inline-block;
-    max-width: 600px;
+    max-width: 650px;
 }
 .section_heading .heading_dv.width_100{
 	max-width: 100%;
@@ -1039,10 +1067,10 @@ button:focus, input:focus, select:focus, textarea:focus{
     text-transform: capitalize;
 }
 .section_heading .heading_dv p {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 17px;
+    line-height: 26px;
     margin-bottom: 20px;
-	color:#999999;
+    color: #999999;
 }
 .jumbo_caption_box .heading_tittle {
     font-size: 40px;
@@ -1059,6 +1087,9 @@ button:focus, input:focus, select:focus, textarea:focus{
     text-decoration: none;
     color: var(--green_color);
 }
+.white_text_heading * {
+    color: #ffffff !important;
+}
 /*==== Section Heading css End  ====*/
 /*==== video section css start  ====*/
 .site_video_dv iframe{
@@ -1072,8 +1103,10 @@ button:focus, input:focus, select:focus, textarea:focus{
     background-size: 1000px;
     background-position: -72% 110%;
     background-repeat: no-repeat;
-    background-image: url(../images/bg/macbook_bg.png);
-    margin-bottom: 80px;
+    /* background-image: url(../images/bg/macbook_bg.png); */
+}
+.why_choose_section .container .row {
+    align-items: center;
 }
 .why_choose_box{
 	display: inline-block;
@@ -1099,17 +1132,18 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 .why_choose_box p {
     color: #fff;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 17px;
+    line-height: 25px;
     font-weight: 300;
 }
 .why_choose_box .best_p {
     margin-bottom: 5px;
 }
-.why_choose_box p a{
-    color: #fff;
-	text-decoration:none;
-	font-size:17px;
+.why_choose_box p a {
+    color: #333;
+    text-decoration: underline;
+    font-size: 17px;
+    font-weight: 600;
 }
 .why_choose_box p a:hover{
     color: #000000;
@@ -1378,7 +1412,7 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 .about_h_img {
     width: 100%;
-    height: 320px;
+    height: 350px;
     margin-bottom: 30px;
 }
 .about_h_img img {
@@ -1985,6 +2019,7 @@ button:focus, input:focus, select:focus, textarea:focus{
     background-size: cover;
     background-position: center center;
     z-index: 1;
+    background-attachment: fixed;
 }
 .education_hero_text_section .overlay {
     z-index: -1;
@@ -2003,37 +2038,55 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 /*==== education Hero Text css End ====*/
 /*==== education white colm start ====*/
+.education_text_section{
+	
+}
+.education_colm_border {
+    border-right: 1px solid #666;
+}
 .education_white_colm {
-    margin-bottom: 50px;
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 25px 20px;
+    display: inline-block;
+    width: 100%;
     text-align: center;
-    min-height: 500px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px 10px;
 }
 .education_white_colm .img_box {
-    margin-bottom: 25px;
+    width: 100%;
 }
 .education_white_colm .img_box img {
-    max-height: 191px;
+    max-height: 190px;
+}
+.education_white_colm .content_box_inr {
+    width: 100%;
+    height: 100%;
 }
 .education_white_colm .content_box h3 {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 700;
     margin-bottom: 15px;
+    margin-top: 20px;
 }
 .education_white_colm .content_box p {
     font-weight: 500;
     font-size: 16px;
 }
+.education_white_colm .learn_btn {
+    background: var(--green_color);
+    color: #fff;
+}
 /*==== education white colm end ====*/
 /*==== success stories css start ====*/
 .success_story_container{
-	padding: 20px;
-	background: #ffffff;
-	border-radius: 10px;
 	display: inline-block;
 	width: 100%;
+}
+.success_story_slider .success_logo {
+    text-align: center;
+}
+.success_story_slider .success_logo img {
+    border-radius: 5px;
 }
 /*==== success stories Css End ====*/
 /*==== education Contact Section start ====*/
@@ -2041,40 +2094,42 @@ button:focus, input:focus, select:focus, textarea:focus{
 	
 }
 .edu_contact_form {
-    padding: 30px 25px;
+    padding: 15px;
     background: #ffffff;
     border-radius: 10px;
     display: inline-block;
     width: 100%;
+    box-shadow: 0 0 12px rgb(0 0 0 / 26%);
+    -webkit-box-shadow: 0 0 12px rgb(0 0 0 / 26%);
+    -moz-box-shadow: 0 0 12px rgb(0 0 0 / 26%);
+    box-shadow: 0 0 12px rgb(0 0 0 / 26%);
 }
-.edu_form_heading {
-    text-align: center;
-    margin-bottom: 30px;
+.edu_form_heading {	
+
 }
 .edu_form_heading h3 {
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 10px;
-}
-.edu_form_heading p {
-    font-size: 18px;
+    margin: 10px 0;
 }
 .edu_contact_form .input_group {
     position: relative;
     width: 100%;
     float: left;
-    margin-bottom: 18px;
 }
 .edu_contact_form .input_group input, 
 .edu_contact_form .input_group select, 
 .edu_contact_form .input_group textarea {
     background: #fafafa;
-    border-radius: 2px;
+    border-radius: 4px;
     border: 1px solid #d6d8d9;
     color: #777777;
-	width:100%;
+    width: 100%;
     height: 45px;
     padding: 5px 10px;
+}
+.edu_contact_form .input_group input{
+    padding: 5px 67px 5px 10px;
 }
 .edu_contact_form .input_group textarea {
 	height:90px;
@@ -2118,8 +2173,16 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 .edu_contact_form .submit_button {
     text-align: center;
-    width: 150px;
     border-radius: 4px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border: none;
+    background: var(--black_color);
+    color: #fff;
+    text-transform: capitalize;
+    padding: 0 10px;
 }
 /*==== education Contact Section end ====*/
 
@@ -2202,28 +2265,65 @@ button:focus, input:focus, select:focus, textarea:focus{
     background-image: url(../images/bg/ipad_edu_bg.jpg);
 }
 .ipad_edu_boxs {
-    background: #fff;
     box-shadow: 0 0 12px rgb(0 0 0 / 32%);
-    padding: 20px;
+    padding: 25px 15px;
     border-radius: 10px;
-    margin-bottom: 50px;
-    border-top: 5px solid var(--green_color);
-    min-height: 435px;
+    margin-bottom: 35px;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    background: var(--black_color);
+}
+.ipad_edu_boxs .svg_shapes {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    z-index: -1;
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+}
+.ipad_edu_boxs .img_box {
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    max-width: 30%;
+    padding: 0 10px;
+}
+.ipad_edu_boxs .img_box .imgs {
+    text-align: center;
 }
 .ipad_edu_boxs .img_box img {
-    max-height: 120px;
     border-radius: 5px;
 }
+.ipad_edu_boxs .content_box {
+    -ms-flex: 0 0 70%;
+    flex: 0 0 70%;
+    max-width: 70%;
+    padding: 0 10px;
+}
 .ipad_edu_boxs .content_box h3 {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 600;
-    margin-top: 16px;
-    margin-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 .ipad_edu_boxs .content_box p {
     margin-bottom: 0;
-    color: #777;
-    line-height: 25px;
+    color: #999;
+    line-height: 23px;
     font-size: 16px;
 }
 /*==== ipad education section css end ====*/
@@ -2235,13 +2335,13 @@ button:focus, input:focus, select:focus, textarea:focus{
 	text-align:center;
 }
 .why_aegis_txt_colm .content_box h3 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 11px;
+    margin-bottom: 15px;
 }
 .why_aegis_txt_colm .content_box p {
-    font-size: 16px;
+    font-size: 15px;
     color: #777777;
 	margin-bottom:0;
 }
@@ -2251,3 +2351,116 @@ button:focus, input:focus, select:focus, textarea:focus{
     background-image: url(../images/bg/mack_edu_bg.jpg);
 }
 /*==== Mac Lab education css end ====*/
+/*==== education Hero Text css start ====*/
+/*==== Business solution banner css start ====*/
+.business_solution_text_banner {
+	padding-top:100px;
+	padding-bottom:50px;
+	min-height:100vh;
+}
+.business_sol_page_caption .heading {
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.business_sol_page_caption p {
+	color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+}
+.business_sol_page_caption .img_box {
+    padding-top: 20px;
+    width: 100%;
+}
+.business_sol_page_caption .img_box img {
+    max-height: 300px;
+}
+.solutions_jumbo_text h5 {
+    font-size: 20px;
+    line-height: 29px;
+    margin: auto;
+}
+/*==== Business solution banner css End ====*/
+/*==== Business solution css Emd ====*/
+.business_solution_hero {
+    position: relative;
+    background-color: var(--black_color);
+    background-image: url(../images/bg/business_sol_hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    z-index: 1;
+}
+.business_solution_hero .overlay {
+    z-index: -1;
+}
+/*==== education Hero Text css End ====*/
+/*==== Business Blogs css start ====*/
+.business_blog_section{
+	
+}
+.business_sol_blogs {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    box-shadow: 0 0 12px rgb(0 0 0 / 39%);
+    -webkit-box-shadow: 0 0 12px rgb(0 0 0 / 39%);
+    -moz-box-shadow: 0 0 12px rgb(0 0 0 / 39%);
+    background: var(--black_color);
+    border-radius: 8px;
+    min-height: 405px;
+}
+.business_sol_blogs .img_box img {
+    height: 140px;
+}
+.business_sol_blogs .img_box {
+    width: 100%;
+}
+.business_sol_blogs .content_box_inr {
+    width: 100%;
+}
+.business_sol_blogs .content_box h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+.business_sol_blogs .content_box p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+}
+/*==== Business Blogs css End ====*/
+/*==== Maclab Blogs css start ====*/
+.maclab_blogs_section{
+	
+}
+.mac_blog_img{
+	display:inline-block;
+	width:100%;
+}
+.mac_blog_img{
+	display:inline-block;
+	width:100%;
+}
+.mac_blog_img img {
+    border-radius: 8px;
+}
+.mac_blog_content h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 11px;
+	text-transform:capitalize;
+}
+.mac_blog_content p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #777;
+}
+/*==== Maclab Blogs css End ====*/
