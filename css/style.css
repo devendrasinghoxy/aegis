@@ -31,6 +31,9 @@ body {
 .purple_bg{
   background: #a27cf7;
 }
+.black_bg{
+  background: #374151;
+}
 ::selection{
 	background-color:var(--black_color);
 	color:var(--white_color);
@@ -522,31 +525,36 @@ button:focus, input:focus, select:focus, textarea:focus{
     -webkit-transform-origin: right top;
     -moz-transform-origin: right top;
     -ms-transform-origin: right top;
-    -webkit-transform: skewY(1deg);
-    -moz-transform: skewY(1deg);
-    -ms-transform: skewY(1deg);
-    -o-transform: skewY(1deg);
-    transform: skewY(1deg);
+    -webkit-transform: skewY(1.5deg);
+    -moz-transform: skewY(1.5deg);
+    -ms-transform: skewY(1.5deg);
+    -o-transform: skewY(1.5deg);
+    transform: skewY(1.5deg);
 }
-.skew_design.bg_gray:before {
+.skew_design:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #ffffff;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform-origin: left top;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -webkit-transform: skewY(-1.5deg);
+    -moz-transform: skewY(-1.5deg);
+    -ms-transform: skewY(-1.5deg);
+    -o-transform: skewY(-1.5deg);
+    transform: skewY(-1.5deg);
+}
+.skew_design.bg_gray:before, .skew_design.bg_gray:after {
     background-color: #e7e9ed;
 }
-.skew_design.bg_black:before {
+.skew_design.bg_black:before, .skew_design.bg_black:after {
     background-color: #374151;
-}
-.skew_design.gradient_bg:before {
-	background: #a27cf7;
-	background: linear-gradient(90deg, #a27cf7 2%, #f59e0b 100%);
-	background: -moz-linear-gradient(90deg, #a27cf7 2%, #f59e0b 100%);
-	background: -webkit-linear-gradient(90deg, #a27cf7 2%, #f59e0b 100%);
-	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#a27cf7", endColorstr="#f59e0b", GradientType=1 );
-}
-.skew_design.gradient_bg_2:before {
-	background: #f74af1;
-	background: -moz-linear-gradient(45deg,  #f74af1 0%, #f7a820 100%);
-	background: -webkit-linear-gradient(45deg,  #f74af1 0%,#f7a820 100%);
-	background: linear-gradient(45deg,  #f74af1 0%,#f7a820 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f74af1', endColorstr='#f7a820',GradientType=1 );
 }
 /*=== Skew Design css End ===*/
 /*=== Modal css Start ===*/
@@ -676,7 +684,7 @@ button:focus, input:focus, select:focus, textarea:focus{
 .main_header {
     float: left;
     width: 100%;
-    background: #333333;
+    background: var(--black_color);
     padding: 0;
     top: 0;
     left: 0;
@@ -1271,7 +1279,7 @@ button:focus, input:focus, select:focus, textarea:focus{
     background: #f7f7f7;
 }
 .product_filter_tab ul li.active{
-    background: var(--green_color);
+    background: var(--black_color);
     color: #ffffff;
 }
 .mix-target {
@@ -1739,12 +1747,12 @@ button:focus, input:focus, select:focus, textarea:focus{
     padding: 0 9px;
     text-transform: capitalize;
     font-size: 14px;
-    background: var(--green_color);
+    background: var(--black_color);
     color: #fff;
     border-radius: 0 5px 5px 0;
 }
 .newsletter_form .input-group .submit_btn:hover {
-    background: var(--black_color);
+    background: #000000;
 }
 /*==== Newsletter section css end ====*/
 /*==== why AR css start ====*/
@@ -1822,7 +1830,7 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 .about_best_text > span {
     display: inline-block;
-    background: var(--green_color);
+    background: var(--black_color);
     color: #fff;
     padding: 5px 14px;
     margin: 0 3px;
@@ -1840,7 +1848,7 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 .about_best_colm .icon_box {
     display: inline-block;
-    background: var(--green_color);
+    background: var(--black_color);
     color: #fff;
     width: 50px;
     height: 50px;
@@ -1854,6 +1862,9 @@ button:focus, input:focus, select:focus, textarea:focus{
     font-weight: 900;
     margin-bottom: 15px;
     margin-top: 15px;
+}
+.about_customer_trust {
+    background: var(--black_color);
 }
 .customer_trust_txt {
     text-align: center;
@@ -1871,11 +1882,11 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 /*==== about page css end ====*/
 /*==== every one code css start ====*/
-.resources_banner{
-    background: #32B275;
-	padding: 12px 20px;
-	display:inline-block;
-	width:100%;
+.resources_banner {
+    background: var(--black_color);
+    padding: 12px 20px;
+    display: inline-block;
+    width: 100%;
 }
 .resources_banner_txt {
     width: 100%;
@@ -1909,8 +1920,9 @@ button:focus, input:focus, select:focus, textarea:focus{
     letter-spacing: 1px;
 }
 .resources_banner_txt .login_btn:hover {
-	background:#ffffff;
-	color: var(--black_color);
+    background: #ffffff;
+    color: var(--black_color);
+    border-color: #fff;
 }
 .code_text_column h3 {
     font-size: 22px;
@@ -1923,13 +1935,13 @@ button:focus, input:focus, select:focus, textarea:focus{
     text-transform: uppercase;
     font-weight: 600;
     font-size: 13px;
-    color: var(--green_color);
+    color: var(--black_color);
 }
 .code_text_column .back_div a i {
     margin-right: 10px;
 }
 .code_text_column .back_div a:hover {
-    color: var(--black_color);
+    color: var(--dark_gray);
 }
 /*==== every one code css end ====*/
 /*==== every one code page css start ====*/
@@ -1980,13 +1992,18 @@ button:focus, input:focus, select:focus, textarea:focus{
     text-decoration: none;
     height: 40px;
     line-height: 40px;
-    background: var(--green_color);
+    background: var(--black_color);
     color: #fff;
     display: inline-block;
     padding: 0 30px;
     border-radius: 2em;
     letter-spacing: 1px;
     margin-top: 10px;
+}
+.code_text_column .swift_btn:hover, 
+.code_text_column .swift_btn:focus {
+    background: var(--dark_gray);
+    color: #fff;
 }
 .mac_text_colm{
 	padding-right:30px;
@@ -2071,10 +2088,6 @@ button:focus, input:focus, select:focus, textarea:focus{
 .education_white_colm .content_box p {
     font-weight: 500;
     font-size: 16px;
-}
-.education_white_colm .learn_btn {
-    background: var(--green_color);
-    color: #fff;
 }
 /*==== education white colm end ====*/
 /*==== success stories css start ====*/
@@ -2191,7 +2204,6 @@ button:focus, input:focus, select:focus, textarea:focus{
     font-size: 30px;
     text-transform: capitalize;
     font-weight: 600;
-    color: #fff;
     margin-bottom: 20px;
 }
 .edu_learn_text .button_wrap .btns {
@@ -2202,7 +2214,7 @@ button:focus, input:focus, select:focus, textarea:focus{
     height: 40px;
     line-height: 40px;
     background: var(--black_color);
-    color: #fff;
+    color: #ffffff;
     display: inline-block;
     padding: 0 30px;
     border-radius: 2em;
@@ -2210,8 +2222,8 @@ button:focus, input:focus, select:focus, textarea:focus{
 	margin:5px;
 }
 .edu_learn_text .button_wrap .btns:hover {
-    background: #ffffff;
-	color: var(--black_color);
+    background: var(--dark_gray);
+	color:#ffffff;
 }
 /*==== education Learn css end ====*/
 /*==== education page banner css start ====*/
@@ -2265,66 +2277,46 @@ button:focus, input:focus, select:focus, textarea:focus{
     background-image: url(../images/bg/ipad_edu_bg.jpg);
 }
 .ipad_edu_boxs {
-    box-shadow: 0 0 12px rgb(0 0 0 / 32%);
-    padding: 25px 15px;
-    border-radius: 10px;
-    margin-bottom: 35px;
-    display: -ms-flexbox;
-    display: flex;
-    display: -webkit-flex;
-    -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    align-items: center;
-    overflow: hidden;
     position: relative;
     z-index: 1;
-    background: var(--black_color);
-}
-.ipad_edu_boxs .svg_shapes {
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -o-transform: scale(1.5);
-    transform: scale(1.5);
-    z-index: -1;
-    opacity: 0.1;
+    display: inline-block;
     width: 100%;
-    height: 100%;
+    text-align: center;
+    padding: 20px 17px;
+    border-radius: 8px;
+    background: var(--black_color);
+    min-height: 440px;
+    margin-bottom: 30px;
 }
 .ipad_edu_boxs .img_box {
-    -ms-flex: 0 0 30%;
-    flex: 0 0 30%;
-    max-width: 30%;
-    padding: 0 10px;
-}
-.ipad_edu_boxs .img_box .imgs {
-    text-align: center;
+	width:100%;
 }
 .ipad_edu_boxs .img_box img {
     border-radius: 5px;
-}
-.ipad_edu_boxs .content_box {
-    -ms-flex: 0 0 70%;
-    flex: 0 0 70%;
-    max-width: 70%;
-    padding: 0 10px;
+    max-height: 115px;
 }
 .ipad_edu_boxs .content_box h3 {
     font-size: 26px;
     font-weight: 600;
-    margin-top: 0;
+    margin-top: 15px;
     margin-bottom: 10px;
+    color: #ffffff;
 }
 .ipad_edu_boxs .content_box p {
-    margin-bottom: 0;
-    color: #999;
+	color: #ffffff;
     line-height: 23px;
     font-size: 16px;
+}
+.ipad_edu_boxs .read_more_btn {
+    background: transparent;
+    color: #fff;
+    margin-top: 10px;
+    border: 1px solid #fff;
+}
+.ipad_edu_boxs .read_more_btn:hover, 
+.ipad_edu_boxs .read_more_btn:focus {
+    background: #ffffff;
+    color: var(--black_color);
 }
 /*==== ipad education section css end ====*/
 /*==== why aegis css end ====*/
@@ -2440,9 +2432,16 @@ button:focus, input:focus, select:focus, textarea:focus{
 .maclab_blogs_section{
 	
 }
-.mac_blog_img{
-	display:inline-block;
-	width:100%;
+.mac_blog_item {
+    background: var(--black_color);
+    padding: 20px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.mac_blog_item:last-child {
+    margin-bottom: 0;
 }
 .mac_blog_img{
 	display:inline-block;
@@ -2457,10 +2456,47 @@ button:focus, input:focus, select:focus, textarea:focus{
     margin-top: 0;
     margin-bottom: 11px;
 	text-transform:capitalize;
+	color:#ffffff;
 }
 .mac_blog_content p {
     font-size: 16px;
     line-height: 26px;
-    color: #777;
+	margin-bottom:0;
+	color:#ffffff;
 }
 /*==== Maclab Blogs css End ====*/
+/*==== Cloud solution page css Start ====*/
+.cloud_solution_page p {
+    font-size: 16px;
+    color: #666666;
+}
+.cloud_solution_blog .img_box img{
+	border-radius:8px;
+}
+.cloud_solution_blog .content_box .headings {
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 11px;
+}
+.cloud_solution_desc h4 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.cloud_service_items {
+    text-align: center;
+    padding: 30px 0;
+}
+.cloud_service_items .img_box {
+    margin-bottom: 20px;
+}
+.cloud_service_items p {
+    font-size: 17px;
+    line-height: 25px;
+    margin-bottom: 0;
+}
+.cloud_solution_desc ul li, .cloud_solution_desc ol li {
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+/*==== Cloud solution page css End ====*/
